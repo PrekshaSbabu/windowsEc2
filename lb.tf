@@ -4,7 +4,7 @@ provider "aws" {
 #vpc
 resource "aws_vpc" "terra_vpc" {
   cidr_block          = "${var.vpc_cidr}"
-  enable_dns_hostname = true
+  enable_dns_hostnames = true
 
   tags = { 
     Name = "Terraform_vpc"
