@@ -75,7 +75,7 @@ resource "aws_security_group" "webservers" {
 }
 
 resource "aws_instance" "webservers" {
-  count             = "var.number_instances
+  count             = "var.number_instances"
   ami               = "ami-077e31c4939f6a2f3"
   instance_type     = "t2.micro"
   #availability_zone = "us-east-2a"
