@@ -19,7 +19,7 @@ resource "aws_internet_gateway" "terra_igw" {
   }
 }
 #subnets
-resource "aws_subnet" "public"
+resource "aws_subnet" "public" {
   count                   = "${length(var.subnets_cidr)}"
   vpc_id                  = "${aws_vpc.terra_vpc.id}"
   cidr_block              = "${element(var.subnets_cidr,count.index)}"
