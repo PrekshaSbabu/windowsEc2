@@ -1,5 +1,7 @@
 ---
  - hosts: localhost
+   connection: local
+   gather_facts: false
 
    tasks:
      - name: install the python-boto on the control node
