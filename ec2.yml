@@ -10,16 +10,16 @@
           region: us-east-2
           rules:
            - proto: tcp
-	     from_port: 80
- 	     to_port: 80
-	     cidr_ip: 0.0.0.0/0
-	   - proto: tcp
-	     from_port: 22
-	     to_port: 22
+             from_port: 80
+             to_port: 80
              cidr_ip: 0.0.0.0/0
-	  rules_egress:
+           - proto: tcp
+             from_port: 22
+             to_port: 22
+             cidr_ip: 0.0.0.0/0
+          rules_egress:
            - proto: all
-	     cidr_ip: 0.0.0.0/0
+             cidr_ip: 0.0.0.0/0
 
      - name: Provision a EC2 instance
        ec2:
