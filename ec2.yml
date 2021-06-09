@@ -4,12 +4,6 @@
    gather_facts: false
 
    tasks:
-     - name: install the python-boto on the control node
-       package:
-         name: python3-boto
-         state: present
-       become: true
-
      - name: Setting up Security/Firewall Group
        ec2_group:
           name: Ansible_ec2_Security_Grp
