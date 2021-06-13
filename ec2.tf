@@ -6,7 +6,7 @@ resource "aws_instance" "example" {
   instance_type     = "t2.micro"
   availability_zone = "us-east-1a"
   security_groups   = ["${aws_security_group.allow_rdp.name}"]
-  key_name = "keyec2"
+  key_name = "newkey"
 }
 resource "aws_security_group" "allow_rdp" {
   name        = "allow_rdp"
