@@ -8,8 +8,8 @@ resource "aws_instance" "example" {
   security_groups   = ["${aws_security_group.allow_rdp.name}"]
   key_name = "keyec2"
 }
-resource "aws_security_group" "allow_rdp" {
-  name        = "allow_rdp"
+resource "aws_security_group" "allow_rdp1" {
+  name        = "allow_rdp1"
   description = "allow ssh traffic"
 
   ingress {
